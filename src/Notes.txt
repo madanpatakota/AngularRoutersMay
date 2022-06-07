@@ -1,0 +1,125 @@
+
+
+
+ngModel -> useful for bind data
+ngStyle -> useful for apply the style to the element based on the condition
+ngClass -> useful for apply the class to the element based on the condition
+
+
+ngIf    -> useful for wheater we have to show the element or not
+ngSwitch -> contain different cases 
+ngFor  -> which useful for handle the group of data
+
+
+
+
+Plugbox which contains the different cases
+based on the case we will get the output
+
+Array is nothing but group of values
+var Id = 1;           -> single value
+var Ids = [1,2,3,4]   -> Array
+
+
+
+
+  service we are using here for maintain the common data .
+  for the data i am writing a function
+  here function contains the array of values
+
+
+
+  *ngFor which is the part of the angular using for looping the my array
+
+  first loop      --> first object is going to be set
+  sercond loop    -> second object is going to be set
+  third loop      -> third object is going to be set
+
+
+
+@component
+@viewchild
+@input
+@output
+@contentchild
+
+
+
+Either add the @Injectable() decorator to 'customerorderService', or configure a different provider (such as a provider with 'useFactory').
+
+
+
+
+1. Pass/send/emit the data from order component
+2. want to receive/subscribe the data in customer component
+
+
+app module -- > service instance is available entire the module
+app component --> service instance ia availble entire all the components
+xyz component -> service instance is avaible in the xyz component 
+
+xyz is the child of the app component
+app componenet is the child of the appmodule
+
+appmodule>appcomp>xyz
+
+
+
+Routing is nothing but the navigation. you can image url of the browser
+
+
+https://github.com/issues        --- > issues page
+
+
+https://locahost:4200/customers --- > customers component
+----> 1. i need to import router related stuff from the package . in appmodulesection
+      2. Need to assign to routing path --> component
+      3. I have to sync the configuration to the appmodule section
+
+
+<router-outlet></router-outlet>
+
+
+
+http://localhost:4200/customer   ==> customer componenent 
+
+
+
+
+https://github.com/pulls
+
+https://github.com/marketplace
+
+
+We can handle authentication and autherization
+we can pass the params
+we can control the component  ---> when component is loading in the browser 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
