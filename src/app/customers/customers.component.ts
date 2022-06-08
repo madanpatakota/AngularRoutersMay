@@ -13,6 +13,7 @@ export class CustomersComponent implements OnInit {
   customers:any= null;
   ngOnInit(): void {
       this.customers = this.customersService.getCustomers();
+      
   }
 
 }

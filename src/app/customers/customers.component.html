@@ -13,8 +13,15 @@
             <td>{{item.customerID}}</td>
             <td>{{item.Name}}</td>
             <!-- <td>{{item.Role}}</td> -->
-            <td><a routerLink="/customer">More...</a></td>
+            <!-- <td><a routerLink="/customer">More...</a></td> -->
+
+            <td><a [routerLink]="['customer',item.customerID]">More...</a></td>
         </tr>
     </tbody>
 </table>
+
+
+<router-outlet></router-outlet>
+
+
 </div>

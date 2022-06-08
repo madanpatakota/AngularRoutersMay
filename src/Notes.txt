@@ -101,9 +101,38 @@ we can control the component  ---> when component is loading in the browser
 
 
 
+appModule        ----approuter
+100 components
 
+RolesModule  --> 10 components   ---> roles.router   ---
+ProductsModule --> 20 products   ---> products.router   ---       app.approuter
+xyzModule  -->  10 compoent      ---> xyz.router   ---
+
+
+
+1.   i have clicked more button then i have naviagated to the customer component
+
+Task no1.
+2.   i want to navigate the customer compoenet based on the current customerID
+3.   because of i want to display the expected row in customer component
+4.   1. Activateroute --- > which contains the params
+     2. bases on the params i have applied the filter 
+     3. i got the output
+     4. i have disapled the data into the compoentn
+
+Task no 2
+5. whenever i am going to click the record i want to display in the same component
+   i have taken routeroutlet  -> capture the component
+   we need to make the realtionship b/w customers and customer -> children in the routes 
+   i have updated the routerLink
+
+
+Task no 3:
+   here based on the requeirment i have to subscirbe params
 
  
+
+
 
 
 
