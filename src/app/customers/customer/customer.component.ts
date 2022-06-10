@@ -35,11 +35,28 @@ export class CustomerComponent implements OnInit {
     //i belive that activateroute contains the url information.....
 
 
-    this.activateRoute.params.subscribe((param: any) => {
+    // this.activateRoute.params.subscribe((param: any) => {
+    //   let arrayCustoemrs = this.customerService.getCustomers() //raw data..
+    //   //console.log(param);
+    //   this.output = arrayCustoemrs.filter((x) => x.customerID === +param.customerID);
+    // })
+
+    // this.activateRoute.queryParams.subscribe((param: any) => {
+    //   let arrayCustoemrs = this.customerService.getCustomers() //raw data..
+    //   //console.log(param);
+    //   this.output = arrayCustoemrs.filter((x) => x.customerID === +param.customerID);
+    // })
+
+    this.activateRoute.fragment.subscribe((param: any) => {
+      console.log(param);
       let arrayCustoemrs = this.customerService.getCustomers() //raw data..
       //console.log(param);
-      this.output = arrayCustoemrs.filter((x) => x.customerID === +param.customerID);
+      this.output = arrayCustoemrs.filter((x) => x.customerID === +param);
     })
+
+
+
+
 
 
   }

@@ -138,6 +138,33 @@ Task no 3:
 
 
 
+/////
+
+URL : http://localhost:4200/customers/customer/3         --Parms
+http://localhost:4200/customers/customer?CustomerID=3    --queryparams
+fragement : 
+http://localhost:4200/customers/customer#3 -- fragment
+
+
+fragment with codieng
+fragmnet with html
+
+querystring with coding
+queyrsgring with html
+
+parms with coding
+params with html
+
+routing with html  15 mins
+
+routing       -----> in the coding part for naviation and also for init path....
+activateroute ---- > for fragment , queyrstring , params subscription
+
+
+template html
+codieng part 
+
+
 
 
 

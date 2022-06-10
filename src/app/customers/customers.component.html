@@ -15,7 +15,27 @@
             <!-- <td>{{item.Role}}</td> -->
             <!-- <td><a routerLink="/customer">More...</a></td> -->
 
-            <td><a [routerLink]="['customer',item.customerID]">More...</a></td>
+            <!-- <td><a [routerLink]="['customer',item.customerID]">More...</a></td> -->
+        
+            <!-- <td>
+                <a 
+                 [routerLink]="['customer']"
+                 [queryParams]="{'customerID':item.customerID}">
+                 More...</a>
+            </td> -->
+
+             <!-- <td>
+                <a 
+                 [routerLink]="['customer']"
+                 fragment="{{item.customerID}}">
+                 More...</a>
+            </td> -->
+
+
+            <td><a style="color: blue; cursor: pointer; " (click)="evtNavigate(item.customerID)">More...</a></td> 
+
+
+        
         </tr>
     </tbody>
 </table>
