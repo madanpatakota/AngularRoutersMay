@@ -4,7 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CustomersComponent } from './customers/customers.component';
 import { RouterModule, Routes } from '@angular/router';
-import { CustomerComponent } from './customers/customer/customer.component'
+import { CustomerComponent } from './customers/customer/customer.component';
+import { LoginComponent } from './login/login.component'
+import { FormsModule } from '@angular/forms';
+import { CanActivateGuard } from './can-activate.guard';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { CanDeactivateGuard } from './can-deactivate.guard';
 
 
 
@@ -16,7 +21,12 @@ import { CustomerComponent } from './customers/customer/customer.component'
 //customers/customer/:customerID
 //'customers/customer'
 const routes:Routes = [
-  {path: 'customers',component:CustomersComponent,
+  {path:'' , component:LoginComponent},
+  {
+    path: 'customers',
+    component:CustomersComponent, 
+    canActivate: [CanActivateGuard],
+    canDeactivate:[CanDeactivateGuard],
      children:
       [
         { 
@@ -25,9 +35,9 @@ const routes:Routes = [
         }
       ],
   },
-  // {path: 'customer',component:CustomerComponent}
-  // {path: 'customer/:customerID',component:CustomerComponent},
-  
+  {path:'not-found' , component:NotfoundComponent , 
+   data:["OOPS. this page is not avaible...."]},
+  {path: '**', redirectTo:'not-found'}
   
 ];
 
@@ -36,11 +46,13 @@ const routes:Routes = [
   declarations: [
     AppComponent,
     CustomersComponent,
-    CustomerComponent
+    CustomerComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

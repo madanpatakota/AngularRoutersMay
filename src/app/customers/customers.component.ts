@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomersService } from 'src/app/customers.service';
 import { Router , ActivatedRoute } from '@angular/router';
+import { canDeactivateCustomersComponent } from '../can-deactivate.guard';
 
 @Component({
   selector: 'app-customers',
   templateUrl: './customers.component.html',
   styleUrls: ['./customers.component.css']
 })
-export class CustomersComponent implements OnInit {
+export class CustomersComponent implements canDeactivateCustomersComponent, OnInit {
 
   constructor(private customersService:CustomersService,
     private activateRoute: ActivatedRoute,
@@ -39,5 +40,23 @@ export class CustomersComponent implements OnInit {
       this.router.navigate([this.initPath + 'customer'],{fragment: customerID.toString() });
 
   }
+
+
+   txtModel = "";
+  
+   canDeactivate() : boolean{
+      if(this.txtModel.length > 0){
+        window.confirm("Do you want to discard the changes?");
+
+        //in case ok then true or cancel false
+
+        //return false;
+      }
+      return true;
+    }
+
+    evtSubmit(){
+       console.log("fired");
+    }
 
 }

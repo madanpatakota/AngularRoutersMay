@@ -167,9 +167,64 @@ codieng part
 
 
 
+//Guard
+//canactivate
+//candeactivate
+
+ng g  c <componnet>
+ng g  g canActivate   ---> we  are going to write the out logic....
 
 
 
+
+
+
+
+
+localhost:4200/login
+{path:'login' , component:LoginComponent}
+
+localhost:4200
+{path:'' , component:LoginComponent}
+
+
+params
+localhost:4200/customers/1
+
+querystring related url
+localhost:4200/customers/customer?CustomerID=1
+
+fragmenturl
+localhost:4200/customers/customer#1
+
+
+localhost:4200/customers/customerDetail
+
+localhost:4200/customers
+{path:'login' , component:CustomersComponent}
+
+
+when ever user is trying to enter the component via routing
+//then canActivate will fired
+
+
+//whenever user is trying to leave the component via routing
+//then deactivate wil fired
+
+
+
+
+interface
+it provides the set of metods 
+it do't suport method implementation
+
+
+i have created one interface in the canDeactiveGuard section
+
+export customerscomponent implments canDeactivateCustoemrsComponent
+i have given the reference to the customes component
+
+becuase of i need the make the communication between guard and customerclass
 
 
 
